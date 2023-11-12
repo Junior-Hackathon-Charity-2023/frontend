@@ -1,4 +1,4 @@
-## Frontend for the Charity Hackathon Project
+# Frontend for the Charity Hackathon Project
 
 ## Overview
 This is the frontend for the charity hackathon project by team #7.
@@ -23,17 +23,17 @@ Node.js
 Yarn or npm
 Once you have installed the dependencies, you can clone the repository and start the development server using the following commands:
 
-# Clone the repository
+### Clone the repository
 git clone https://github.com/Junior-Hackathon-Charity-2023/frontend
 
-# Go to the project directory
+### Go to the project directory
 cd jun-hackathon-frontend
 
-# Install the dependencies
+### Install the dependencies
 yarn install
 
 
-# Start the development server
+### Start the development server
 yarn start
 
 
