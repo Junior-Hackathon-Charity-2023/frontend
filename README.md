@@ -6,21 +6,15 @@ This is the frontend for the charity hackathon project by team #7.
 ## Technologies Used
 The frontend is built using the following technologies:
 
-React
-Tailwind CSS
+- React
+- Tailwind CSS
 
 ## Getting Started
 To get started with the project, you will need to install the following dependencies:
 
-Node.js (can be installed from here)
-Yarn (can be installed from here)
-Once you have installed the dependencies, you can clone the repository and start the development server using the following commands:
+- Node.js
+- Yarn or npm
 
-Getting Started
-To get started with the project, you will need to install the following dependencies:
-
-Node.js
-Yarn or npm
 Once you have installed the dependencies, you can clone the repository and start the development server using the following commands:
 
 ### Clone the repository
@@ -45,11 +39,11 @@ Once the development server is running, you can visit the frontend in your web b
 Full information about the project is available in the organization README.
 
 ## Changes
-Added instructions on how to install Node.js and Yarn.
-Added instructions on how to clone the repository and start the development server.
-Added instructions on how to access the frontend in a web browser.
-Added information on contributing to the project.
-Added information on the license.
-Added a link to the organization README.
+- Added instructions on how to install Node.js and Yarn.
+- Added instructions on how to clone the repository and start the development server.
+- Added instructions on how to access the frontend in a web browser.
+- Added information on contributing to the project.
+- Added information on the license.
+- Added a link to the organization README.
 
 Thanks!
