@@ -4,6 +4,7 @@ import CellImage from "../cell/CellImage";
 import React from "react";
 import getImagesForDimension from "../../mockdata/data";
 import {Button} from "../button/Button";
+import ModalWin from "../modals/ModalWin";
 
 const DEFAULT_DIMENSION = 4
 
@@ -23,7 +24,8 @@ class Field extends React.Component {
         this.state = {
             dimension: dimension,
             initialImages: initialImages,
-            currentImagesState: shuffle(initialImages)
+            currentImagesState: shuffle(initialImages),
+            modalIsOpen: false,
         }
     }
 
@@ -50,10 +52,11 @@ class Field extends React.Component {
         if (!currentImages.every((element, index) => element === initialImages[index])) {
             return;
         }
-        alert("Congrat!")
+        this.setState({modalIsOpen: true})
+
     }
 
-    onNewGame = () => { // TODO: добавить кнопку новая игра
+    onNewGame = () => { 
         let dimension = this.state.dimension
         let images = getImagesForDimension(dimension)
 
@@ -85,6 +88,8 @@ class Field extends React.Component {
 
 
     render() {
+        const modal = this.state.modalIsOpen ? <ModalWin open={this.state.modalIsOpen} setOpen={(modalIsOpen) => this.setState({modalIsOpen})} /> : <></>
+
         return (
             <>
                 <div className="relative">
@@ -98,6 +103,7 @@ class Field extends React.Component {
                         ))}
                     </div>
                 </div>
+                {modal}
                 <div className="mt-2 flex justify-center">
                     <Button text={'Новая игра!'} onClick={this.onNewGame}/>
                 </div>
