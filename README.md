@@ -24,7 +24,7 @@ Yarn or npm
 Once you have installed the dependencies, you can clone the repository and start the development server using the following commands:
 
 # Clone the repository
-git clone https://github.com/Kidchai/jun-hackathon-frontend
+git clone https://github.com/Junior-Hackathon-Charity-2023/frontend
 
 # Go to the project directory
 cd jun-hackathon-frontend
