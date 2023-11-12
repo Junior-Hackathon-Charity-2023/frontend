@@ -1,11 +1,12 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { PuzzlePieceIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import RulesItem from '../rules/RulesItem'
-import { Rules } from '../../mockdata/rules'
+import { CheckIcon, PuzzlePieceIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Button } from '../button/Button'
+import { useNavigate } from 'react-router';
 
-export default function ModalStart({open, setOpen}) {
+export default function ModalWin({open, setOpen}) {
+    let navigate = useNavigate(); 
+
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -48,28 +49,20 @@ export default function ModalStart({open, setOpen}) {
                   </div>
                   <div className="mt-3 text-center sm:mt-5">
                     <Dialog.Title as="h1" className="text-base text-xl font-bold leading-6 text-gray-900">
-                      Добро пожаловать!
+                      Ура!
                     </Dialog.Title>
-                    <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
-                      Время сыграть в пазл!
+                    <Dialog.Title as="h3" className="text-base mt-2 font-semibold leading-6 text-gray-900">
+                      Поздравляем c успешным прохождением игры!
                     </Dialog.Title>
-                    <div className="mt-4">
-                    <Dialog.Title as="h4" className="text-base mb-4 font-semibold leading-6 text-gray-900">
-                      Вот несколько простых правил к игре:
-                    </Dialog.Title>
-                              <ul class="space-y-1 text-gray-500 list-inside dark:text-gray-400">
-                                  {Rules.map((rule, index) => (
-                                  <RulesItem key={index} rule = {rule}/>
-                                  ))}
-                                  </ul>
-                    </div>
                   </div>
                 </div>
                 <div className="mt-5 sm:mt-6 flex justify-center">
                   <Button
-                  text={'Я готов!'}
+                  text={'Играть снова!'}
                     onClick={() => setOpen(false)}
                   />
+                <Button text={'Выбрать другую картинку'} onClick={() => navigate("/gallery")}/> 
+
                 </div>
               </Dialog.Panel>
             </Transition.Child>
